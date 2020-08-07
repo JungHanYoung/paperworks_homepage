@@ -1,0 +1,146 @@
+* { 
+    font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+    color: #1b262c;
+}
+
+h1,h2,h3,h4,h5 {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    width: 100%;
+    height: 94px;
+    padding: 0 20px;
+    background-color: white;
+}
+
+nav .gnb-wrapper {
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .gnb-wrapper .logo {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+nav .gnb-wrapper .menu {
+    font-size: 1.4rem;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+main {
+}
+
+main section.section1 {
+    height: 80vh;
+}
+
+main section .main-header {
+    height: 810px;
+    position: relative;
+}
+
+main section .main-header .main-header__text {
+    position: absolute;
+    top: 240px;
+    left: 240px;
+    color: white;
+}
+
+main section .main-header .main-header__text h2 {
+    font-size: 3rem;
+}
+
+main section .main-header .main-header__text h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+main section .main-header .main-header__img {
+    height: 810px;
+    overflow: hidden;
+}
+
+main section .main-header .main-header__img img {
+    width: 100%;
+    height: 100%;
+}
+
+main section .main-header .main-menu {
+    position: relative;
+    z-index: 100;
+    max-width: 1000px;
+    margin: -100px auto 0;
+}
+
+main section .main-header .main-menu .main-menu-wrapper {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+main section .main-header .main-menu .main-menu-wrapper li {
+    padding: 12px;
+    margin-right: 10px;
+    width: 240px;
+    height: 240px;
+    border: 1px solid #e1e1e1;
+    box-shadow: 0 5px 17px rgba(0, 0, 0, .4);
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main section .main-header .main-menu li:last-child {
+    margin-right: 0;
+}
+
+main section .main-header .main-menu .main-menu-wrapper li i {
+    color: #797979;
+    font-size: 108px;
+}
+
+main section .main-header .main-menu .main-menu-wrapper li .main-menu__txt {
+    font-size: 1.8rem;
+    margin-top: 8px;
+    font-weight: lighter;
+}
