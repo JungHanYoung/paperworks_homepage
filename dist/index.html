@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>페이퍼웍스</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.17.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.17.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.17.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.17.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.17.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="border-b-2">
+        <div class="h-24 container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-3xl">Paperworks</h1>
+            <ul class="">
+                <li class="mr-4 float-right">
+                    <a class="text-red-400" href="/">상담 및 접수</a>
+                </li>
+                <li class="mr-4 float-right">
+                    <a href="/">연혁</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="py-40" style="background-image: url(background_image1.jpg); background-size: cover;">
+            <div class="container mx-auto ">
+                <h2 class="text-4xl my-8 font-bold">
+                    <span class="text-red-400">신속한 수리서비스</span>
+                    <span class="text-blue-400">합리적인 수리가격</span>
+                </h2>
+                <h2 class="text-4xl font-bold my-8 text-gray-800">신뢰를 중요시하는 컴퓨터 수리업체입니다.</h2>
+                <a href="" class="bg-blue-300 py-4 px-16 text-gray-200 inline-block rounded animate-bounce">상담 및 접수</a>
+            </div>
+        </section>
+        <section class="container mx-auto mb-12">
+            <ul class="flex justify-between items-center h-48">
+                <li class="flex-1 text-center py-8 px-8 border-r-2 hover:bg-red-300 hover:text-white duration-200">데스크탑수리</li>
+                <li class="flex-1 text-center py-8 px-8 border-r-2 hover:bg-red-300 hover:text-white duration-200">노트북수리</li>
+                <li class="flex-1 text-center py-8 px-8 border-r-2 hover:bg-red-300 hover:text-white duration-200">데이터복구</li>
+                <li class="flex-1 text-center py-8 px-8 hover:bg-red-300 hover:text-white duration-200">설치대행서비스</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="border-t-2 bg-gray-500 text-gray-200 py-12">
+        <div class="container mx-auto grid grid-cols-3">
+            <p class="text-2xl font-bold">Paperworks</p>
+            <div>
+                <p class="text-xl">대표자: 김정웅</p>
+                <p class="text-xl">사업자 등록 번호: 603-16-48987</p>
+                <p class="text-xl">경기도 수원시 영통구 인계로270번길 11-3(매탄동)</p>
+            </div>
+            <p>
+                COPYRIGHT C DOCTOR PC CO, LTD. ALL RIGHT RESERVED.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
