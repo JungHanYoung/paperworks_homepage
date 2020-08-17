@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>페이퍼웍스</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/7.17.2/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.17.2/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.17.2/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.17.2/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.17.2/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav class="border-b-2">
+        <div class="h-24 flex container mx-auto items-center justify-between px-4">
+            <h1 class="text-3xl">Paperworks</h1>
+            <ul class="">
+                <li class="mr-4 float-right">
+                    <a class="text-red-400" href="/">상담 및 접수</a>
+                </li>
+                <li class="mr-4 float-right">
+                    <a href="/">연혁</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section class="py-40" style="background-image: url(background_image1.jpg); background-size: cover;">
+            <h2 class="container mx-auto text-4xl text-indigo-500 font-bold align-middle">고객지원</h2>
+        </section>
+        <section class="my-20">
+            <table class="container mx-auto table-auto border-t-2 border-b-2 border-gray-500">
+                <tbody>
+                    <tr class="border-b-2">
+                        <th class="w-1/6 px-4 py-4 bg-gray-100">제품유형</th>
+                        <th class="w-auto px-4 py-4">
+                            <div class="inline-block float-left relative w-64">
+                                <select
+                                    class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>PC</option>
+                                    <option>노트북</option>
+                                    <option>기타</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr class="border-b-2">
+                        <th class="w-1/6 px-4 py-4 bg-gray-100">문의유형</th>
+                        <th class="w-auto px-4 py-4">
+                            <div class="inline-block float-left relative w-64">
+                                <select
+                                    class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                                    <option>Q&A</option>
+                                    <option>주문접수</option>
+                                    <option>견적문의</option>
+                                    <option>기타</option>
+                                </select>
+                                <div
+                                    class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </th>
+                    </tr>
+                    <tr class="border-b-2">
+                        <th class="w-1/6 px-4 py-4 bg-gray-100">제품명</th>
+                        <th class="w-auto px-4 py-4">
+                            <input
+                                class="float-left shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text">
+                        </th>
+                    </tr>
+                    <tr class="border-b-2">
+                        <th class="w-1/6 px-4 py-4 bg-gray-100">이메일</th>
+                        <th class="w-auto px-4 py-4">
+                            <input
+                                class="float-left shadow appearance-none border rounded w-1/2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text">
+                        </th>
+                    </tr>
+                    <tr>
+                        <th class="w-1/6 px-4 py-4 bg-gray-100">내용</th>
+                        <th class="w-auto px-4 py-4">
+                            <textarea
+                                class="w-full shadow appearance-none border rounded p-4 border-0 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                rows="6"></textarea>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mt-10 text-center">
+                <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-24 rounded focus:outline-none focus:shadow-outline">
+                    전송
+                </button>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t-2 bg-gray-500 text-gray-200 py-12">
+        <div class="container mx-auto grid grid-cols-3">
+            <p class="text-2xl font-bold">Paperworks</p>
+            <div>
+                <p class="text-xl"></p>
+                <p class="text-xl">사업자 등록 번호: 603-16-48987</p>
+                <p class="text-xl"></p>
+            </div>
+            <p>
+                COPYRIGHT C DOCTOR PC CO, LTD. ALL RIGHT RESERVED.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
